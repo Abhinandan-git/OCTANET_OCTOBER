@@ -123,7 +123,7 @@ header, main, section, footer, ul, ol, dl, li {
 	background-color: var(--black);
 	padding: 0 min(12.5rem, 15%) 0.5rem;
 }
-.footer-content { padding: 0.5rem 0; }
+.footer-content { padding: 1.25rem 0 0.5rem; }
 .footer-paragraph {
 	text-align: justify;
 }
