@@ -1,0 +1,65 @@
+:root {
+	--nav-height: 4rem;
+	--letter-spacing: 0.1rem;
+	--white: rgb(239, 250, 246);
+	--background: rgb(48, 48, 48);
+}
+@font-face {
+	font-family: 'Rubik';
+	font-weight: 300, 400, 500, 800;
+	src: url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+}
+body {
+	margin: 0;
+	font-size: 1rem;
+	position: relative;
+	color: var(--white);
+	padding: 0.5rem 1rem;
+	scroll-behavior: smooth;
+	font-family: 'Rubik', sans-serif;
+	background-color: var(--background);
+	letter-spacing: var(--letter-spacing);
+}
+.nav-bar {
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	flex-direction: row;
+	height: var(--nav-height);
+	background-color: transparent;
+	justify-content: space-between;
+}
+.nav-bar:hover { background-color: black; }
+.brand-name {
+	font-size: 1.5rem;
+	padding-left: 15%;
+}
+.brand-first-word { font-weight: 800; }
+.brand-last-word { font-weight: 300; }
+.nav-list {
+	width: 50%;
+	display: flex;
+	list-style: none;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-evenly;
+}
+.nav-item {
+	width: 100%;
+	text-align: center;
+}
+.nav-content {
+	cursor: pointer;
+	transition-duration: 0.25s;
+	transition-timing-function: ease;
+	transition-property: letter-spacing;
+	letter-spacing: var(--letter-spacing);
+}
+.nav-content:hover { letter-spacing: calc(var(--letter-spacing) + 0.1rem); }
+.icons {
+	vertical-align: middle;
+	font-size: 1rem !important;
+}
