@@ -1,8 +1,11 @@
 :root {
 	--nav-height: 4rem;
 	--letter-spacing: 0.1rem;
+	--black: rgb(25, 24, 28);
 	--white: rgb(239, 250, 246);
-	--background: rgb(48, 48, 48);
+	--buttons: rgb(120, 80, 173);
+	--background: rgb(51, 49, 51);
+	--title-blue: rgb(54, 147, 229);
 }
 @font-face {
 	font-family: 'Rubik';
@@ -12,14 +15,23 @@
 body {
 	margin: 0;
 	font-size: 1rem;
+	line-height: 1.75;
 	position: relative;
+	overflow-x: hidden;
 	color: var(--white);
 	padding: 0.5rem 1rem;
+	box-sizing: border-box;
 	scroll-behavior: smooth;
+	height: 100vh; /* Delete it later */
 	font-family: 'Rubik', sans-serif;
 	background-color: var(--background);
 	letter-spacing: var(--letter-spacing);
 }
+header, main, section, footer, ul, ol, dl, li {
+	margin: 0;
+	padding: 0;
+}
+/* Header */
 .nav-bar {
 	top: 0;
 	left: 0;
@@ -39,6 +51,7 @@ body {
 .nav-list {
 	width: 50%;
 	display: flex;
+	padding: 0 1rem;
 	list-style: none;
 	flex-direction: row;
 	align-items: stretch;
@@ -65,4 +78,57 @@ body {
 .nav-bar a {
 	color: var(--white);
 	text-decoration: none;
+}
+/* Main Section */
+.mini-title {
+	font-size: 0.75rem;
+	color: var(--title-blue);
+	text-transform: uppercase;
+}
+.main-title {
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 0.5rem 0;
+	color: var(--white);
+}
+.button {
+	cursor: pointer;
+	font-weight: 800;
+	border-radius: 0;
+	padding: 0.5rem 3rem;
+	letter-spacing: 0.15rem;
+	transition-duration: 0.25s;
+	transition-property: border-radius;
+	transition-timing-function: ease-in-out;
+}
+.button:hover { border-radius: 0.1rem 1.5rem; }
+.outline-button {
+	color: var(--buttons);
+	background-color: transparent;
+	border: 3px solid var(--buttons);
+}
+.fill-button {
+	color: var(--white);
+	background-color: var(--buttons);
+	border: 3px solid var(--buttons);
+}
+/* Footer */
+.footer-wrapper {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	font-size: 0.75rem;
+	text-align: center;
+	background-color: var(--black);
+	padding: 0 min(12.5rem, 15%) 0.5rem;
+}
+.footer-content { padding: 0.5rem 0; }
+.footer-paragraph {
+	text-align: justify;
+}
+.button-section {
+	gap: 4rem;
+	display: flex;
+	justify-content: center;
 }
