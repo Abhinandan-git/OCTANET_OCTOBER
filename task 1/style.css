@@ -32,11 +32,8 @@ body {
 	background-color: transparent;
 	justify-content: space-between;
 }
-.nav-bar:hover { background-color: black; }
-.brand-name {
-	font-size: 1.5rem;
-	padding-left: 15%;
-}
+.brand-wrapper { padding-left: 2%; }
+.brand-name { font-size: 1.5rem; }
 .brand-first-word { font-weight: 800; }
 .brand-last-word { font-weight: 300; }
 .nav-list {
@@ -49,17 +46,23 @@ body {
 }
 .nav-item {
 	width: 100%;
+	display: inline;
 	text-align: center;
 }
-.nav-content {
+.nav-item:last-child { flex-shrink: 1.15; }
+.brand-name, .nav-content, .icons {
 	cursor: pointer;
 	transition-duration: 0.25s;
 	transition-timing-function: ease;
 	transition-property: letter-spacing;
 	letter-spacing: var(--letter-spacing);
 }
-.nav-content:hover { letter-spacing: calc(var(--letter-spacing) + 0.1rem); }
+.brand-name:hover, .nav-content:hover, .icons:hover { letter-spacing: calc(var(--letter-spacing) + 0.1rem); }
 .icons {
 	vertical-align: middle;
 	font-size: 1rem !important;
+}
+.nav-bar a {
+	color: var(--white);
+	text-decoration: none;
 }
