@@ -5,11 +5,12 @@
 	--black: rgb(15, 14, 17);
 	--white: rgb(239, 250, 246);
 	--buttons: rgb(120, 80, 173);
-	--background: rgb(45, 44, 45);
+	--background: rgb(39, 38, 39);
 	--title-blue: rgb(54, 147, 229);
 	--links-hover: rgb(87, 160, 255);
 	--links-visited: rgb(133, 19, 195);
 	--links-unvisited: rgb(0, 93, 215);
+	--links-visited-hover: rgb(76, 11, 168);
 	--transparent-black: rgba(18, 18, 19, 0.574);
 }
 @font-face {
@@ -44,12 +45,16 @@ header, main, section, footer, ul, ol, dl, li, form, input {
 }
 a {
 	text-decoration: none;
+	transition-duration: 0.35s;
 	color: var(--links-unvisited);
+	transition-timing-function: ease;
 }
 a:hover {
 	cursor: pointer;
 	color: var(--links-hover);
 }
+a:visited { color: var(--links-visited); }
+a:visited:hover { color: var(--links-visited-hover); }
 /* Header */
 header {
 	top: 0;
@@ -92,15 +97,14 @@ header {
 	text-align: center;
 }
 .nav-item:last-child { flex-shrink: 1.15; }
-a, .brand-name { transition-duration: 0.35s; }
+.brand-name { transition-duration: 0.35s; }
 .nav-content, .main-icons { transition-duration: 0.25s; }
-a,.brand-name, .nav-content, .main-icons {
+a, .brand-name, .nav-content, .main-icons {
 	cursor: pointer;
 	transition-timing-function: ease;
-	transition-property: letter-spacing;
 	letter-spacing: var(--letter-spacing);
+	transition-property: letter-spacing, color;
 }
-a { transition-property: letter-spacing, color; }
 a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--letter-spacing) + 0.1rem); }
 .main-icons {
 	vertical-align: middle;
