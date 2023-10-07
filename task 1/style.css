@@ -1,11 +1,15 @@
 :root {
 	--nav-height: 4rem;
 	--letter-spacing: 0.1rem;
+	--grey: rgb(87, 88, 89);
 	--black: rgb(25, 24, 28);
 	--white: rgb(239, 250, 246);
 	--buttons: rgb(120, 80, 173);
 	--background: rgb(51, 49, 51);
 	--title-blue: rgb(54, 147, 229);
+	--links-hover: rgb(87, 160, 255);
+	--links-unvisited: rgb(0, 93, 215);
+	--transparent-black: rgba(0, 0, 0, 0.5);
 }
 @font-face {
 	font-family: 'Rubik';
@@ -19,6 +23,7 @@ html, body {
 body {
 	margin: 0;
 	padding: 0;
+	height: 100vh;
 	font-size: 1rem;
 	line-height: 1.75;
 	position: relative;
@@ -26,28 +31,46 @@ body {
 	color: var(--white);
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	height: 100vh;
 	font-family: 'Rubik', sans-serif;
 	background-color: var(--background);
 	letter-spacing: var(--letter-spacing);
 }
-header, main, section, footer, ul, ol, dl, li {
+header, main, section, footer, ul, ol, dl, li, form, input {
 	margin: 0;
 	padding: 0;
+	padding-block: 0;
+	padding-inline: 0;
+}
+a {
+	text-decoration: none;
+	color: var(--links-unvisited);
+}
+a:hover {
+	cursor: pointer;
+	color: var(--links-hover);
 }
 /* Header */
-.nav-bar {
+header {
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 999;
+	position: sticky;
+}
+.nav-bar {
+	top: 0;
+	left: 0;
+	right: 0;
 	display: flex;
 	position: absolute;
 	align-items: center;
 	flex-direction: row;
 	height: var(--nav-height);
+	transition-duration: 0.25s;
 	background-color: transparent;
 	justify-content: space-between;
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
 }
 .brand-wrapper { padding-left: 2%; }
 .brand-name { font-size: 1.5rem; }
@@ -68,14 +91,16 @@ header, main, section, footer, ul, ol, dl, li {
 	text-align: center;
 }
 .nav-item:last-child { flex-shrink: 1.15; }
-.brand-name, .nav-content, .icons {
+a, .brand-name { transition-duration: 0.35s; }
+.nav-content, .icons { transition-duration: 0.25s; }
+a,.brand-name, .nav-content, .icons {
 	cursor: pointer;
-	transition-duration: 0.25s;
 	transition-timing-function: ease;
 	transition-property: letter-spacing;
 	letter-spacing: var(--letter-spacing);
 }
-.brand-name:hover, .nav-content:hover, .icons:hover { letter-spacing: calc(var(--letter-spacing) + 0.1rem); }
+a { transition-property: letter-spacing, color; }
+a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--letter-spacing) + 0.1rem); }
 .icons {
 	vertical-align: middle;
 	font-size: 1rem !important;
@@ -83,6 +108,9 @@ header, main, section, footer, ul, ol, dl, li {
 .nav-bar a {
 	color: var(--white);
 	text-decoration: none;
+}
+.scrolled-nav {
+	background-color: var(--transparent-black);
 }
 /* Main Section */
 .mini-title {
@@ -107,6 +135,46 @@ header, main, section, footer, ul, ol, dl, li {
 	transition-timing-function: ease-in-out;
 }
 .button:hover { border-radius: 0.1rem 1.5rem; }
+.main-banner {
+	height: 100vh;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/* background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/nathan-anderson-iYO-EGosrCo-unsplash.jpg); */
+}
+.main-text {
+	top: 50%;
+	left: 40%;
+	width: 80%;
+	display: flex;
+	position: absolute;
+	justify-content: space-between;
+	transform: translate(-40%, -50%);
+}
+.left-section, .right-section { width: 45%; }
+.main-form {
+	border: none;
+	padding: 0.75rem 1rem;
+	text-align: center;
+	border-radius: 0.25rem;
+	width: calc(100% - 2rem);
+	height: calc(100% - 1.5rem);
+	background-color: var(--white);
+}
+.main-paragraph { text-align: justify; }
+.dark-title, .form-description { color: var(--black); }
+.main-input-form {
+	padding: 1rem;
+	outline: none;
+	margin: 1rem 0;
+	display: block;
+	border-radius: 0.25rem;
+	width: calc(100% - 2rem);
+	border: 1px solid var(--grey);
+	background-color: transparent;
+	letter-spacing: var(--letter-spacing);
+}
 .outline-button {
 	color: var(--buttons);
 	background-color: transparent;
@@ -116,6 +184,16 @@ header, main, section, footer, ul, ol, dl, li {
 	color: var(--white);
 	background-color: var(--buttons);
 	border: 3px solid var(--buttons);
+}
+.main-button {
+	width: 100%;
+	border-radius: 0.25rem;
+}
+.credits {
+	right: 0.75rem;
+	bottom: 0.25rem;
+	position: absolute;
+	font-size: 0.75rem;
 }
 /* Footer */
 footer {
