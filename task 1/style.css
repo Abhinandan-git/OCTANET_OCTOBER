@@ -93,8 +93,8 @@ header {
 }
 .nav-item:last-child { flex-shrink: 1.15; }
 a, .brand-name { transition-duration: 0.35s; }
-.nav-content, .icons { transition-duration: 0.25s; }
-a,.brand-name, .nav-content, .icons {
+.nav-content, .main-icons { transition-duration: 0.25s; }
+a,.brand-name, .nav-content, .main-icons {
 	cursor: pointer;
 	transition-timing-function: ease;
 	transition-property: letter-spacing;
@@ -102,7 +102,7 @@ a,.brand-name, .nav-content, .icons {
 }
 a { transition-property: letter-spacing, color; }
 a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--letter-spacing) + 0.1rem); }
-.icons {
+.main-icons {
 	vertical-align: middle;
 	font-size: 1rem !important;
 }
@@ -110,10 +110,8 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	color: var(--white);
 	text-decoration: none;
 }
-.scrolled-nav {
-	background-color: var(--transparent-black);
-}
-/* Main Section */
+.scrolled-nav { background-color: var(--transparent-black); }
+/* Main Banner Section */
 .mini-title {
 	font-size: 0.75rem;
 	color: var(--title-blue);
@@ -142,7 +140,8 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/nathan-anderson-iYO-EGosrCo-unsplash.jpg);
+	background-color: var(--black);
+	/* background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/nathan-anderson-iYO-EGosrCo-unsplash.jpg); */
 }
 .main-text {
 	top: 50%;
@@ -215,4 +214,50 @@ footer {
 	display: flex;
 	justify-content: center;
 	padding: 0.5rem 0 0.75rem 0;
+}
+/* Features Section */
+.features-section {
+	width: 100%;
+	padding: 1rem 0;
+	position: relative;
+	text-align: center;
+}
+.feature-cards-container {
+	width: 100%;
+	display: flex;
+	padding: 1rem 0;
+	align-items: stretch;
+	justify-content: center;
+}
+.feature-cards-section {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	justify-content: space-between;
+}
+.feature-card {
+	width: 22.5%;
+	margin: 1rem 0;
+}
+.feature-text {
+	margin: 1rem 0;
+	font-weight: 600;
+	font-size: 1.1rem;
+}
+.feature-description {
+	color: var(--white);
+	text-align: justify;
+}
+.feature-icon {
+	width: 4rem;
+	height: 4rem;
+	margin: 0 auto;
+	padding: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--black);
+}
+.feature-icons {
+	font-size: 3rem !important;
+	line-height: 4rem !important;
 }
