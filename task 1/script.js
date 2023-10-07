@@ -8,3 +8,16 @@ window.addEventListener("scroll", () => {
         navBar.classList.remove("scrolled-nav");
     }
 });
+let light_theme = false;
+const body = document.body;
+const theme = document.getElementById("theme");
+theme.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+    if (light_theme === true) {
+        light_theme = false;
+        theme.innerHTML = "light_mode";
+    } else {
+        light_theme = true;
+        theme.innerHTML = "dark_mode";
+    }
+});
