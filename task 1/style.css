@@ -77,7 +77,7 @@ header {
 .brand-first-word { font-weight: 800; }
 .brand-last-word { font-weight: 300; }
 .nav-list {
-	width: 50%;
+	width: 40%;
 	display: flex;
 	padding: 0 1rem;
 	list-style: none;
@@ -156,7 +156,7 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	margin: 0;
 	border: none;
 	text-align: center;
-	padding: 0.75rem 1rem;
+	padding: 0.5rem 1rem 1rem;
 	border-radius: 0.25rem;
 	width: calc(100% - 2rem);
 	height: calc(100% - 1.5rem);
