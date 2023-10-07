@@ -1,11 +1,11 @@
 :root {
 	--nav-height: 4rem;
 	--letter-spacing: 0.1rem;
-	--grey: rgb(61, 61, 64);
+	--grey: rgb(65, 65, 68);
 	--black: rgb(15, 14, 17);
 	--white: rgb(239, 250, 246);
 	--buttons: rgb(120, 80, 173);
-	--background: rgb(33, 31, 33);
+	--background: rgb(45, 44, 45);
 	--title-blue: rgb(54, 147, 229);
 	--links-hover: rgb(87, 160, 255);
 	--links-visited: rgb(133, 19, 195);
@@ -141,7 +141,7 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: var(--black);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(images/nathan-anderson-iYO-EGosrCo-unsplash.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/nathan-anderson-iYO-EGosrCo-unsplash.jpg);
 }
 .main-text {
 	top: 50%;
@@ -314,4 +314,18 @@ footer {
 .step-circle-cell {
 	text-align: center;
 	vertical-align: top;
+}
+/* Parallax Image */
+.parallax-image {
+	height: 50vh;
+	position: relative;
+	background-color: var(--grey);
+}
+.parallax {
+	min-height: 50vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.119), rgba(0, 0, 0, 0.275)), url(images/benjamin-voros-phIFdC6lA4E-unsplash.jpg);
 }
