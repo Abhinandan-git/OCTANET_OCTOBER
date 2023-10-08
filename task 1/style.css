@@ -2,15 +2,17 @@
 	--nav-height: 4rem;
 	--letter-spacing: 0.1rem;
 	--grey: rgb(65, 65, 68);
-	--black: rgb(15, 14, 17);
+	--black: rgb(13, 15, 14);
 	--white: rgb(239, 250, 246);
-	--buttons: rgb(120, 80, 173);
+	--buttons: rgb(73, 167, 218);
 	--background: rgb(39, 38, 39);
+	--blue-green: rgb(1, 150, 204);
 	--title-blue: rgb(54, 147, 229);
-	--links-hover: rgb(87, 160, 255);
+	--links-hover: rgb(21, 39, 105);
 	--links-visited: rgb(133, 19, 195);
-	--links-unvisited: rgb(0, 93, 215);
-	--links-visited-hover: rgb(76, 11, 168);
+	--links-unvisited: rgb(71, 32, 211);
+	--bakermiller-pink: rgb(254, 138, 165);
+	--links-visited-hover: rgb(110, 39, 141);
 	--transparent-black: rgba(18, 18, 19, 0.574);
 }
 @font-face {
@@ -114,18 +116,19 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	color: var(--white);
 	text-decoration: none;
 }
+.nav-bar a:hover { color: var(--white); }
 .scrolled-nav { background-color: var(--transparent-black); }
 /* Main Banner Section */
 .mini-title {
 	font-size: 0.75rem;
-	color: var(--title-blue);
+	color: var(--bakermiller-pink);
 	text-transform: uppercase;
 }
 .main-title {
 	font-size: 2rem;
 	font-weight: 700;
 	padding: 0.5rem 0;
-	color: var(--white);
+	color: var(--orange);
 }
 .button {
 	cursor: pointer;
@@ -145,7 +148,7 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: var(--black);
-	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/nathan-anderson-iYO-EGosrCo-unsplash.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/andras-vas-Bd7gNnWJBkU-unsplash.jpg);
 }
 .main-text {
 	top: 50%;
@@ -153,6 +156,7 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	width: 80%;
 	display: flex;
 	position: absolute;
+	align-items: center;
 	justify-content: space-between;
 	transform: translate(-40%, -50%);
 }
@@ -203,6 +207,7 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	position: absolute;
 	font-size: 0.75rem;
 }
+.credits a { font-weight: 600; }
 /* Footer */
 footer {
 	width: 100%;
@@ -215,49 +220,53 @@ footer {
 	padding: 0 min(12.5rem, 15%) 0.5rem;
 }
 .footer-content { padding: 1.25rem 0 0.5rem; }
-.footer-paragraph { text-align: justify; }
-.button-section {
-	gap: 4rem;
-	display: flex;
-	justify-content: center;
-	padding: 0.5rem 0 0.75rem 0;
+.footer-list { text-align: justify; }
+.footer-faq-list {
+	padding-left: 0.5rem;
+	list-style-type: "-";
 }
-/* Features Section */
-.features-section {
+.footer-faq-list li {
+	padding-left: 0.5rem;
+}
+dt {
+	font-size: 1rem;
+}
+/* Internships Section */
+.internships-section {
 	width: 100%;
 	position: relative;
 	text-align: center;
 	padding: 1.25rem 0 1rem;
 	background-color: var(--grey);
 }
-.feature-cards-container, .steps-container {
+.internship-cards-container, .steps-container {
 	width: 100%;
 	display: flex;
 	padding: 1rem 0;
 	align-items: stretch;
 	justify-content: center;
 }
-.feature-cards-section {
+.internship-cards-section {
 	width: 80%;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: space-between;
 	justify-content: space-between;
 }
-.feature-card {
+.internship-card {
 	width: 22.5%;
 	margin: 1rem 0;
 }
-.feature-text {
+.internship-text {
 	margin: 1rem 0;
 	font-weight: 600;
 	font-size: 1.1rem;
 }
-.feature-description {
+.internship-description {
 	color: var(--white);
 	text-align: justify;
 }
-.feature-icon {
+.internship-icon {
 	width: 4rem;
 	height: 4rem;
 	margin: 0 auto;
@@ -265,13 +274,13 @@ footer {
 	border-radius: 50%;
 	background-color: var(--black);
 }
-.feature-icons {
+.internship-icons {
+	color: var(--white);
 	font-size: 3rem !important;
 	line-height: 4rem !important;
 }
-.section {
-	padding-top: 1rem;
-}
+.section { padding-top: 1rem; }
+.apply-button { margin-top: 1.5rem; }
 /* Steps Section */
 .steps-section {
 	width: 100%;
@@ -331,5 +340,5 @@ footer {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.119), rgba(0, 0, 0, 0.275)), url(images/benjamin-voros-phIFdC6lA4E-unsplash.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.119), rgba(0, 0, 0, 0.275)), url(images/luca-bravo-XJXWbfSo2f0-unsplash.jpg);
 }
