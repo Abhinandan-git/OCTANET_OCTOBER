@@ -340,5 +340,5 @@ dt {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.119), rgba(0, 0, 0, 0.275)), url(images/luca-bravo-XJXWbfSo2f0-unsplash.jpg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.275)), url(images/luca-bravo-XJXWbfSo2f0-unsplash.jpg);
 }
