@@ -5,15 +5,19 @@
 	--black: rgb(13, 15, 14);
 	--white: rgb(239, 250, 246);
 	--buttons: rgb(73, 167, 218);
+	--eminence: rgb(127, 20, 139);
 	--background: rgb(39, 38, 39);
 	--blue-green: rgb(1, 150, 204);
 	--title-blue: rgb(54, 147, 229);
-	--links-hover: rgb(21, 39, 105);
-	--links-visited: rgb(133, 19, 195);
-	--links-unvisited: rgb(71, 32, 211);
-	--bakermiller-pink: rgb(254, 138, 165);
-	--links-visited-hover: rgb(110, 39, 141);
+	--links-hover: rgb(12, 47, 173);
+	--mid-white: rgb(156, 159, 165);
+	--light-white: rgb(209, 213, 221);
+	--links-visited: rgb(116, 32, 219);
+	--links-unvisited: rgb(59, 45, 255);
+	--bakermiller-pink: rgb(254, 138, 180);
+	--links-visited-hover: rgb(128, 18, 175);
 	--transparent-black: rgba(18, 18, 19, 0.574);
+	--transparent-grey: rgba(214, 214, 227, 0.748);
 }
 @font-face {
 	font-family: 'Rubik';
@@ -128,7 +132,7 @@ a:hover, .brand-name:hover, .nav-content:hover { letter-spacing: calc(var(--lett
 	font-size: 2rem;
 	font-weight: 700;
 	padding: 0.5rem 0;
-	color: var(--orange);
+	color: var(--white);
 }
 .button {
 	cursor: pointer;
@@ -225,12 +229,8 @@ footer {
 	padding-left: 0.5rem;
 	list-style-type: "-";
 }
-.footer-faq-list li {
-	padding-left: 0.5rem;
-}
-dt {
-	font-size: 1rem;
-}
+.footer-faq-list li { padding-left: 0.5rem; }
+dt { font-size: 1rem; }
 /* Internships Section */
 .internships-section {
 	width: 100%;
@@ -341,4 +341,38 @@ dt {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.275)), url(images/luca-bravo-XJXWbfSo2f0-unsplash.jpg);
+}
+/* Light Mode */
+body.light-mode {
+	color: var(--black);
+	background-color: var(--white);
+}
+.light-mode .scrolled-nav { background-color: var(--transparent-grey); }
+.light-mode .main-banner {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(images/artem-sapegin-DErxVSSQNdM-unsplash.jpg);
+}
+.light-mode .nav-bar a { color: var(--black); }
+.light-mode .nav-bar a:hover { color: var(--black); }
+.light-mode .mini-title { color: var(--eminence); }
+.light-mode .main-title { color: var(--black); }
+.light-mode .main-form { background-color: var(--grey); }
+.light-mode .dark-title, .light-mode .form-description { color: var(--white); }
+.light-mode .main-input-form {
+	color: var(--white);
+	border: 1px solid var(--white);
+}
+.light-mode .main-input-form::placeholder { color: var(--transparent-grey); }
+.light-mode .footer-wrapper { background-color: var(--white); }
+.light-mode .internships-section { background-color: var(--mid-white); }
+.light-mode .internship-description { color: var(--black); }
+.light-mode .fill-button { background-color: var(--eminence); }
+.light-mode .outline-button { color: var(--eminence); }
+.light-mode .button { border: 3px solid var(--eminence); }
+.light-mode .steps-section { background-color: var(--light-white); }
+.light-mode .step-circle {
+	color: var(--white);
+	background-color: black;
+}
+.light-mode .parallax {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.275)), url(images/markus-spiske-fpTVkXjxL_Y-unsplash.jpg);
 }
